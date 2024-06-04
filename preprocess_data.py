@@ -33,7 +33,7 @@ def trainGenerator(batch_size_train, batch_size_val, train_path, val_path,
         classes = [image_folder],
         class_mode = None,
         target_size = target_size,
-        batch_size = batch_size_val
+        batch_size = batch_size_val,
         shuffle = True
         )
     val_mask_generator = val_datagen.flow_from_directory(
@@ -41,7 +41,7 @@ def trainGenerator(batch_size_train, batch_size_val, train_path, val_path,
         classes = [mask_folder],
         class_mode = None,
         target_size = target_size,
-        batch_size = batch_size_val
+        batch_size = batch_size_val,
         shuffle = True
         )
     val_generator = zip(val_image_generator, val_mask_generator)
