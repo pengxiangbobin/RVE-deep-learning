@@ -76,7 +76,7 @@ def unet(input_size = (128,128,3)):
  
     model = Model(inputs, conv11)
 
-    model.compile(optimizer = 'Adam', loss = 'mse')
+    model.compile(optimizer = 'Adam', loss = 'mse', metrics = [])
 
     return model
 
